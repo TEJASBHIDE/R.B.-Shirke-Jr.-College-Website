@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S. M. B. Torgalkar Junior College</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <style>
+        /* fonts  */
+@font-face {
+    font-family:"Raleway-regular";
+    src:url(../fonts/Raleway-Regular.ttf)
+}
+@font-face {
+    font-family:"Raleway-medium";
+    src:url(../fonts/Raleway-Medium.ttf)
+}
+@font-face {
+    font-family:"Raleway-bold";
+    src:url(../fonts/Raleway-Bold.ttf)
+}
+@font-face {
+    font-family:"Raleway-extrabold";
+    src:url(../fonts/Raleway-ExtraBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-semibold";
+    src:url(../fonts/Raleway-SemiBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-black";
+    src:url(../fonts/Raleway-Black.ttf)
+}
+
+
+/* colors  */
+
+:root {
+    --primary:#d2601a;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+    --primary_2: #fff1e1;
+    --maindark: #1d3c45;
+}
+
+/* Reset  */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+
+/*------Loader----*/
+#preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    background: #fff1e1;
+}
+.loader {
+    --background: linear-gradient(135deg, #23C4F8, #275EFE);
+    --shadow: rgba(39, 94, 254, 0.28);
+    --text: #6C7486;
+    --page: rgba(255, 255, 255, 0.36);
+    --page-fold: rgba(255, 255, 255, 0.52);
+    --duration: 3s;
+    width: 200px;
+    height: 140px;
+    position: relative;
+  }
+  
+  .loader:before, .loader:after {
+    --r: -6deg;
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    width: 120px;
+    top: 80%;
+    box-shadow: 0 16px 12px var(--shadow);
+    transform: rotate(var(--r));
+  }
+  
+  .loader:before {
+    left: 4px;
+  }
+  
+  .loader:after {
+    --r: 6deg;
+    right: 4px;
+  }
+  
+  .loader div {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    position: relative;
+    z-index: 1;
+    perspective: 600px;
+    box-shadow: 0 4px 6px var(--shadow);
+    background-image: var(--background);
+  }
+  
+  .loader div ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  
+  .loader div ul li {
+    --r: 180deg;
+    --o: 0;
+    --c: var(--page);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform-origin: 100% 50%;
+    color: var(--c);
+    opacity: var(--o);
+    transform: rotateY(var(--r));
+    -webkit-animation: var(--duration) ease infinite;
+    animation: var(--duration) ease infinite;
+  }
+  
+  .loader div ul li:nth-child(2) {
+    --c: var(--page-fold);
+    -webkit-animation-name: page-2;
+    animation-name: page-2;
+  }
+  
+  .loader div ul li:nth-child(3) {
+    --c: var(--page-fold);
+    -webkit-animation-name: page-3;
+    animation-name: page-3;
+  }
+  
+  .loader div ul li:nth-child(4) {
+    --c: var(--page-fold);
+    -webkit-animation-name: page-4;
+    animation-name: page-4;
+  }
+  
+  .loader div ul li:nth-child(5) {
+    --c: var(--page-fold);
+    -webkit-animation-name: page-5;
+    animation-name: page-5;
+  }
+  
+  .loader div ul li svg {
+    width: 90px;
+    height: 120px;
+    display: block;
+  }
+  
+  .loader div ul li:first-child {
+    --r: 0deg;
+    --o: 1;
+  }
+  
+  .loader div ul li:last-child {
+    --o: 1;
+  }
+  
+  .loader span {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text);
+  }
+  
+  @keyframes page-2 {
+    0% {
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  
+    35%, 100% {
+      opacity: 0;
+    }
+  
+    50%, 100% {
+      transform: rotateY(0deg);
+    }
+  }
+  
+  @keyframes page-3 {
+    15% {
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+  
+    35% {
+      opacity: 1;
+    }
+  
+    50%, 100% {
+      opacity: 0;
+    }
+  
+    65%, 100% {
+      transform: rotateY(0deg);
+    }
+  }
+  
+  @keyframes page-4 {
+    30% {
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    65%, 100% {
+      opacity: 0;
+    }
+  
+    80%, 100% {
+      transform: rotateY(0deg);
+    }
+  }
+  
+  @keyframes page-5 {
+    45% {
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+  
+    65% {
+      opacity: 1;
+    }
+  
+    80%, 100% {
+      opacity: 0;
+    }
+  
+    95%, 100% {
+      transform: rotateY(0deg);
+    }
+  }
+  
+/* Loader Ends Here */
+
+body{
+    -webkit-font-smoothing:antialiased;
+    font-family: "Raleway-regular";
+}
+.container {
+    width:100%;
+    padding:15px;
+    margin:0 auto;
+}
+
+
+.main-wrapper{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.nav-background{
+    width:100%;
+    height:100%;
+    background: #fff1e1;
+    position: absolute;
+    top:0;
+    left:0;
+    padding:0;
+    z-index:1;
+}
+
+.nav-trigger{
+    /* position: absolute; */
+    top:0;
+    left:0;
+    z-index:1;
+    padding:15px;
+    display:none;
+    background-color: var(--maindark);
+}
+
+.nav-trigger svg{
+    transform:rotate(90deg) scaleX(-1);
+    -webkit-transform:rotate(90deg) scaleX(-1);
+    -moz-transform:rotate(90deg) scaleX(-1);
+    -ms-transform:rotate(90deg) scaleX(-1);
+    -o-transform:rotate(90deg) scaleX(-1);
+    width:40px;
+    height:40px;
+    filter: invert(1);
+}
+.site-content-wrapper{
+  width:100%;
+  height:100%;
+  position:absolute;
+  background:var(--heaven);
+  z-index:2;
+  transition:all .3s ease;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  -o-transition:all .3s ease;
+}
+
+.site-content-wrapper.scaled{
+  transform:scale(0.9) translateX(90%);
+  -webkit-transform:scale(0.9) translateX(90%);
+  -moz-transform:scale(0.9) translateX(90%);
+  -ms-transform:scale(0.9) translateX(90%);
+  -o-transform:scale(0.9) translateX(90%);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+  box-shadow:0 3px 10px 0 var(--secondary);
+}
+
+.site-content{
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  background-color: var(--pure);
+}
+
+
+header.topbar{
+    background:var(--secondary);
+    color:var(--pure);
+    font-family:"Raleway-semibold";
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0px;
+}
+.icons{
+  margin: auto;
+}
+header.topbar .auth > div a{
+    color:var(--pure);
+    text-decoration: none;
+}
+header.topbar .icons a{
+  margin-right:0.6rem;
+}
+header.topbar .auth .divider{
+    padding:0 1rem;
+}
+header.topbar .auth > div img{
+    margin-right:0.35rem;
+}
+.flex{
+  display:flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+
+
+@media (min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1152px;
+    }
+  }
+
+
+  nav .top{
+      padding:1.5rem 0;
+      background-color: #fff1e1;
+  }
+  nav .top .contact h5,  nav .top .time h5{
+      font-family:"Raleway-black";
+      margin-bottom:0.25rem;
+  }
+  nav .top .contact h6, nav .top .time h6{
+    font-family:"Raleway-medium";
+    letter-spacing: 0.055rem;
+    font-size:0.75rem;
+    color:var(--ternary);
+}
+nav .top .contact img, nav .top .time img{
+    margin-right:1rem;
+}
+
+.justify-center{
+    justify-content:center;
+    padding: 0px;
+}
+
+nav .navbar{
+    background-color: var(--maindark);
+}
+nav .navbar a{
+    text-decoration:none;
+    color:var(--heaven);
+    font-family:"Raleway-semibold";
+    font-size:1rem;
+    padding:1rem 1.5rem;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+nav .navbar a.active{
+    background:var(--primary);
+    color:var(--pure);
+}
+nav .navbar a:hover{
+    background:var(--primary);
+    color:var(--pure); 
+}
+.magic-shadow{
+    position: relative;
+    background : var(--heaven);
+}
+
+.magic-shadow:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:69px;
+    background-image:url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-22px;
+    z-index:-1;
+    
+}
+.magic-shadow-sm{
+    position: relative;
+    background:var(--heaven);
+}
+.magic-shadow-sm:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:69px;
+    background-image:url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-1;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+}
+
+
+/* Breadcrumb */
+
+ol{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background:var(--secondary);
+      color:var(--pure);
+      font-family:"Raleway-semibold";
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 2rem;
+}
+ol li{
+    position: relative;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+ ol li img{
+    height: 2rem;
+    width: 2rem;
+    filter: invert(100%);
+ }
+
+ ol li a{
+    text-decoration: none;
+    color: var(--primary_2);
+ }
+/* Breadcrumb  */
+
+
+header.hero{
+    background: rgba(0,0,0,0.4);
+    height:600px;
+    background-image:url(images/hero-bg.webp);
+    background-blend-mode: overlay;
+    background-position: 28% 68%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+header.hero .container{
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+header.hero h1{
+    font-family:"Raleway-extrabold";
+    color:var(--heaven);
+    font-size: 3.5rem;
+    margin-bottom:0.75rem;
+}
+header.hero h1 span{
+    color:var(--primary);
+}
+header.hero p{
+    font-family: "Raleway-medium";
+    font-size: 20px;
+    width:50%;
+    line-height:1.5;
+    margin-bottom:1rem;
+    color: var(--heaven);
+}
+.btn{
+    padding:0.75rem 0.75rem;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    line-height:0.8;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border:1px solid transparent;
+}
+
+
+.btn-primary {
+    background:var(--primary);
+    color:var(--heaven);
+}
+.btn-primary:hover{
+    background:transparent;
+    border:1px solid var(--heaven);
+}
+
+.btn-foot{
+    background:var(--secondary);
+    color:var(--heaven); 
+  }
+
+  .btn-foot:hover{
+    background:transparent;
+    color:var(--heaven); 
+    border:1px solid var(--heaven);
+  }
+
+.service-card .btn-primary{
+    color:var(--heaven); 
+}
+
+.service-card .btn-primary:hover{
+    color:var(--maindark); 
+    border: 1px solid var(--maindark);
+}
+
+.btn-about {
+    background:var(--primary);
+    color:var(--heaven);
+}
+.btn-about:hover{
+    background:transparent;
+    color:var(--maindark); 
+    border:1px solid var(--maindark);
+}
+
+.btn-secondary{
+    background:var(--secondary);
+    color:var(--heaven); 
+}
+.btn-secondary:hover{
+    background:transparent;
+    color: #232B38; 
+    border:1px solid var(--maindark);
+}
+
+header.hero button:first-child{
+    margin-right:0.50rem;
+}
+
+header.hero .hero-image{
+    position:absolute;
+    top:-40px;
+    right:40px;
+}
+
+section{
+    padding:2rem 0;
+}
+section.e-books{
+    background:var(--light);
+    padding-top: 2rem;
+}
+
+.section-heading{
+    font-family:"Raleway-bold";
+    text-align:center;
+    Position:relative;
+    margin-bottom:6rem;
+    color: var(--maindark);
+}
+.section-heading:after{
+    content:'';
+    display:block;
+    width: 100%;
+    height:30px;
+    background-image:url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    bottom:-40px;
+}
+
+
+/* About College Starts */
+section.about-college img{
+    width:85%;
+    margin-top: -1rem;
+}
+.flex-1{
+    flex:1;
+}
+section.about-college h2{
+    font-family: "Raleway-bold";
+    font-size:1.4rem;
+    color:var(--secondary);
+    margin-bottom:2rem;
+    line-height:1.3;
+}
+section.about-college p{
+    line-height: 1.7;
+    margin-bottom:4rem;
+}
+/* About  College Ends */
+
+/* --=========Notice Section Starts=========-- */
+section.latest-news{
+    position:relative;
+    z-index:0;
+}
+
+.main-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice-head{
+    color: var(--heaven);
+    height: 35px;
+    background-color: var(--maindark);
+}
+
+.center{
+    text-align: center;
+    width: 70%;
+}
+
+.center small{
+    color:red ;
+    font-size: 10px;
+}
+
+.size{
+    width: 90%;
+}
+
+@media (max-width : 992px) {
+    .size{
+        width: 100%;
+    }
+    
+}
+
+
+
+/* --=========Notice Section Ends=========-- */
+
+/* E-Books Starts */
+section.e-books .e-books-slider .e-books-card{
+    background:var(--heaven);
+    padding:1.5rem 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1), 0px 9px 20px 0 rgba(0, 0, 0, 0.0);
+}
+section.e-books .e-books-slider .e-books-card .product-image img{
+    width:80%;
+    height:200px;
+    object-fit:contain;
+    padding-bottom:1rem;
+}
+hr{
+    border:1px solid var(--light);
+    opacity: 0.8;
+    margin:1rem 0;
+}
+section.e-books .e-books-slider .e-books-card h2{
+    font-family:"Raleway-bold";
+    font-size:1.3rem;
+    margin:2rem;
+}
+.text-center{
+    text-align: center;
+}
+section.e-books .e-books-slider .e-books-card button span{
+    text-decoration: none;
+    margin: auto;
+}
+section.e-books .e-books-slider .e-books-card button span a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+section.e-books .e-books-slider .e-books-card button{
+    font-family:"Raleway-medium";
+    color:var(--secondary);
+    background:var(--heaven);
+    border:2px solid var(--primary);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    display:flex;
+    align-items: center;
+    width:50%;
+    height: 4rem;
+    font-size:1rem;
+    cursor: pointer;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+section.e-books .e-books-slider .e-books-card button:hover{
+    background:var(--primary);
+    color:var(--heaven);
+    text-decoration: none;
+}
+.e-books-slider .e-books-card button img{
+    background:var(--primary);
+    padding:0.50rem;
+    height:32px;
+    margin-right:1.2rem;
+}
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin:0 -27px;
+}
+.e-books .slider-btn{
+    width: 30px;
+    height:30px;
+    border: none;
+    background:var(--primary);
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    cursor:pointer;
+    outline:none;
+}
+
+.prev-btn{
+    position:absolute;
+    top:46%;
+    left:-3rem;
+    z-index: 1;
+}
+.next-btn{
+    position:absolute;
+    top:46%;
+    right:-3rem;
+    z-index: 1;
+}
+.e-books .slider{
+    position: relative;
+}
+.e-books .btn-wrapper{
+    margin-top:2rem;
+}
+.slick-track{
+    padding:1rem 0;
+}
+/* E-Books Ends */
+
+
+section.we-provide{
+    position:relative;
+    z-index:0;
+    
+}
+section.we-provide .card-wrapper{
+    margin-right:-2rem;
+    margin-top:8rem;
+}
+section.we-provide .service-card{
+    text-align: center;
+    padding:2rem;
+    padding-top:4rem;
+    margin-right:2rem;
+    position: relative;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 0px 20px 30px rgba( 0, 0, 0, 0.1 );
+}
+section.we-provide .service-card .icon{
+    position: absolute;
+    top:-45px;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+} 
+section.we-provide .service-card h2{
+    font-family: "Raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom:1rem;
+    color: var(--maindark);
+}
+section.we-provide .service-card p{
+    color: var(--maindark);
+    line-height: 1.6;
+    margin-bottom:1rem;
+}
+
+
+/* Top Rankers Starts */
+section.top-rankers {
+    display: flex;
+    padding: 2rem;
+}
+section.top-rankers .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.left-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 37px;
+}
+.left-title .section-heading{
+    display: flex;
+    margin: 25px;
+    justify-content: center;
+}
+.right-title h3{
+    background-color: #fff;
+    margin: 5px;
+}
+table{
+    font-family: "Raleway-semibold";
+    height: 3rem;
+    border-collapse: collapse;
+}
+th{
+    background-color: var(--maindark);
+    color: var(--primary_2);
+}
+.right-title th, tr, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.right-title{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .right-title{
+        width: 100%;
+    }
+    section.top-rankers{
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+    
+}
+
+/* Top  Ranker Section Ends Here */
+
+
+
+
+.cta {
+    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../images/hero-bg.jpg");
+    
+    background-position: 0% 65%;
+    padding: 120px 0;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .cta h3 {
+    color: #fff;
+    font-family: "Raleway-bold";
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .cta p {
+    color: #fff;
+  }
+  .cta .cta-btn {
+    font-family: "Raleway-Bold";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+  }
+  .cta .cta-btn:hover {
+    background: var(--primary_2);
+    border: 2px solid var(--maindark);
+    color: var(--maindark);
+  }
+  @media (max-width: 1024px) {
+    .cta {
+      background-attachment: scroll;
+    }
+  }
+  @media (min-width: 769px) {
+    .cta .cta-btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+
+
+.text-pure{
+    color:var(--pure);
+}
+
+
+
+
+/* --=========Contact Starts=========-- */
+section.contact-us{
+    height: 25rem;
+    padding-top:0;
+    padding-bottom: 0;
+}
+
+@media (max-width:700px) {
+    section.contact-us{
+        display: flex;
+        flex-direction: column;
+        height: 45rem;
+    }
+    
+}
+
+section.contact-us .contact-info-wrapper {
+    padding:2rem 0;
+    flex:1;
+    background:var(--maindark);
+}
+section.contact-us .map{
+    flex:1;
+}
+section.contact-us .contact-info{
+    display:flex;
+    justify-content: center;
+}
+section.contact-us .contact-info > div > div {
+    display:flex;
+    align-items:center;
+    margin-bottom:2rem;
+}
+section.contact-us .contact-info > div > div img{
+    margin-right: 1rem;
+}
+section.contact-us .contact-info > div > div > div{
+    display:flex;
+    flex-direction: column;
+    color: var(--light);
+}
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-family: "Raleway-bold";
+    margin-bottom:0.25rem;
+    color: var(--light);
+}
+/* --=========Contact Ends=========-- */
+
+
+
+/* --=========Footer Starts=========-- */
+footer{
+    background:var(--footer);
+    padding:2rem 0;
+}
+footer .container{
+    display:flex;
+    color:var(--pure);
+}
+
+footer .box{
+    flex:1;
+    margin-right:2rem;
+    text-align:center;
+}
+
+footer .instagram-api img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+footer .instagram-api .post-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+footer .instagram-api .post-wrap > div{
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    margin-bottom:10px;
+}
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color:var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+footer .box ul li a:hover{
+    color:var(--primary);
+}
+footer .box h3{
+    border-bottom:1px solid var(--primary);
+    padding-bottom:1rem;
+    margin-bottom:1rem;
+}
+
+footer .box p{
+    line-height: 1.6;
+    margin-bottom:1rem;
+}
+footer .box ul li{
+    margin-bottom:1rem;
+}
+footer .box:nth-child(3) > div {
+    display:flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(3) > div img{
+    margin-right:1rem;
+}
+footer .box:nth-child(3) ul li{
+    margin-bottom:1.5rem;
+}
+
+footer.copyright{
+    padding:1rem 0;
+    background: var(--secondary);
+    color:var(--pure);
+    text-align: center;
+    font-size: 0.75rem;
+}
+footer.copyright a{
+    color:var(--primary);
+    text-decoration: none;
+}
+
+/* --=========Footer Ends=========-- */
+
+
+.nav-background .mobile-nav{
+    padding:3rem 25px;
+}
+.nav-background .mobile-nav ul{
+    list-style-type: none;
+}
+.nav-background .mobile-nav ul li{
+    margin-bottom:1rem;
+}
+.nav-background .mobile-nav ul li a{
+    text-decoration: none;
+    color:var(--secondary);
+    font-family: "Raleway-medium";
+}
+.nav-background .mobile-nav ul li a:hover{
+    color:var(--primary);
+}
+.nav-background .contact, .nav-background .time{
+    padding:1rem;
+    padding-left:0;
+}
+.nav-background .contact img, .nav-background .time img{
+    margin-right:1rem;
+}
+.nav-background .contact h5,.nav-background .time h5{
+    font-family:"Raleway-bold";
+    margin-bottom:0.25rem;
+    font-size:1rem;
+}
+.nav-background .contact h6, .nav-background .contact h6{
+    font-size: 0.75rem;
+}
+
+
+@media (max-width:992px){
+    .nav-trigger{
+        display:block;
+    }
+    header.topbar, nav{
+        display:none;
+    }
+
+    header.hero {
+        margin-top:-4rem;
+    }
+
+    header.hero p{
+        font-size: 16px;
+    }
+    header.hero .hero-image{
+        right:-160px;
+        top:100px;
+    }
+    .e-books .slider-btn{
+        display:none ;
+    }
+    footer .instagram-api .post-wrap > div{
+        width:calc(1/2*100% - (1 - 1/3)*10px);
+    }
+}
+
+
+@media (max-width:992px){
+
+    header.hero .container{
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width:768px){
+
+    header.hero .container{
+        margin-top: 10rem;
+    }
+
+
+    .about-college .about-college-wrap{
+        flex-direction: column;
+    }
+    .about-college .about-college-wrap img{
+        width:100%;
+        margin-bottom: 2rem;
+    }
+
+    section.we-provide .card-wrapper{
+        flex-direction:column;
+    }
+    section.we-provide .card-wrapper .service-card{
+        margin-bottom:6rem;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .box{
+        text-align: left;
+        margin-right:0;
+        margin-bottom:3rem;
+    }
+    footer .box:nth-child(3) h3{
+        text-align:left;
+    }
+    footer .box:nth-child(3) > div{
+        display:block;
+    }
+}
+
+@media( max-width:576px){
+    header.hero .hero-image{
+        right:-235px;
+        top:150px;
+    }
+    header.hero .container{
+        padding-left:1rem;
+        padding-top: 5rem;
+    }
+    header.hero{
+        margin-top:-3rem;
+    }
+    section.top-rankers .timer > div{
+        margin:0.50rem;
+    }
+    section.top-rankers .timer{
+        display: flex;
+        flex-direction: column;
+        margin:0.5rem;
+    }
+
+    section.subscribe .container{
+        flex-direction: column;
+        padding:0.50rem;
+    }
+   
+}
+
+
+
+
+/* Speech Section */
+.Speech{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.Shirke .ShirkeImage img {
+    width: 100%;
+    aspect-ratio: 335/231;
+    object-fit: cover;
+} 
+.Shirke .ShirkeContent {
+    background-color: var(--pure);
+    padding: 40px 25px;
+}
+
+.Shirke  .ShirkeContentWrap {
+    display: flex;
+    flex-direction: column;
+}
+.contentAreaWrap {
+    background-color: var(--maindark);
+}
+
+.mwPageArea {
+    padding: 0px;
+    clear: both;
+}
+.mwPageBlock {
+    position: relative;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.mwPageBlock>.blockContents.pad-bottom-m {
+    padding-bottom: 30px;
+}
+
+DIV.mwPageBlock>.blockContents.pad-top-m {
+    padding-top: 30px;
+}
+
+.Shirke {
+    position: relative;
+}
+.Shirke .ShirkeQuoteOpen {
+    top: 0;
+    left: -4px;
+    transform: translate(0, calc(-100% + 10px));
+}
+.Shirke .ShirkeQuoteClose {
+    bottom: 0;
+    right: -4px;
+    transform: translate(0, calc(100% - 10px));
+}
+.Shirke .ShirkeQuote {
+    width: 116px;
+}
+
+.Shirke .ShirkeQuote {
+    width: 70px;
+    height: auto;
+    margin: 10px;
+    position: absolute;
+    z-index: 3;
+    
+}
+
+
+@media (min-width: 992px) {
+
+    .Shirke .ShirkeImage img {
+        width: calc(100% + 12.5px);
+        aspect-ratio: 550/371;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 0 0 50px 0;
+    }
+
+    .Shirke .ShirkeQuote {
+        width: 116px;
+    }
+
+    .Shirke .ShirkeWrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: auto;
+        border-radius: 0;
+    }
+
+    .Shirke .ShirkeContent {
+        margin: 50px 0 0 0;
+        width: calc(100% + 12.5px);
+        transform: translateX(-12.5px);
+        border-radius: 20px;
+        padding: 50px 70px;
+        min-height: 425px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+    }
+    .Shirke .ShirkeDescription {
+        font-family: "Raleway-regular";
+        font-size: 24px;
+        line-height: 1.6;
+    }
+}
+
+
+.Shirke .ShirkeWrap {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px;
+}
+
+
+.Shirke .ShirkeName {
+    color: var(--primary);
+    font-family: var(--font-family-heavy);
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.Shirke .ShirkeDescription {
+    font-size: var(--font-size-mobile);
+    font-family: var(--font-family-normal);
+    line-height: 1.625;
+    color: var(--text-color);
+    order: -1;
+    margin: 0 0 30px 0;
+}
+
+
+
+/* Animations */
+
+@keyframes ScrollReveal{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade{
+    animation: ScrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+@keyframes Side-left{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-side-left{
+    animation: Side-left ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+@keyframes Side-right{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fade-side-right{
+    animation: Side-right ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+
+.news-ticker{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center; 
+    padding-right: 4px;
+}
+
+.news-ticker-header{
+    background: #656565;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,209,67,1) 0%,rgba(255,145,83,1) 90%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    width: 240px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.news-ticker-content{
+    overflow: hidden;
+    width: calc(100% - 40px);
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-ticker-content ul{
+    display: flex;
+    white-space: nowrap;
+    list-style: none;
+    animation: ticker 30s linear infinite;
+}
+
+.news-ticker-content ul li::after{
+    content: '|';
+    margin: 0 10px;
+}
+
+.news-ticker-content ul li:last-child::after{
+    content: '';
+}
+
+.news-ticker-content ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Ticker animation */
+
+@keyframes ticker {
+
+    from{
+        transform: translateX(300%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+    
+}
+    </style>
+</head>
+
+<body onload="loader()">
+    <div id="preloader">
+        <div class="loader">
+            <div>
+                <ul>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path
+                                d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z">
+                            </path>
+                        </svg>
+                    </li>
+                </ul>
+            </div><span>Loading</span>
+        </div>
+
+    </div>
+    <div class="main-wrapper">
+        <div class="nav-background">
+            <div class="mobile-nav">
+                <div class="cart">
+                </div>
+                <div class="nav-top">
+                    <ul>
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="About-us.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="Admission.html">Admission</a>
+                        </li>
+                        <li>
+                            <a href="ebooks.html">E-Books</a>
+                        </li>
+                        <li>
+                            <a href="Merit.php">Merit List</a>
+                        </li>
+                        <li>
+                            <a href="Gallery.php">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="Faculty.html">Faculty</a>
+                        </li>
+                        <li>
+                            <a href="Feedback.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact flex items-center">
+                    <img src="./icons/phone.svg" alt="">
+                    <div>
+                        <h5>Call us: (+91) 70576 35016</h5>
+                        <h6>E-mail : smbtjunior@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="time flex items-center">
+                    <img src="./icons/clock.svg" alt="">
+                    <div>
+                        <h5>Working Hours:</h5>
+                        <h6>Mon - Sat (7.00am - 12.00am)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-content-wrapper">
+            <div class="nav-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bar-chart">
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" />
+                </svg>
+            </div>
+            <div class="site-content">
+                <nav>
+                    <div class="top">
+                        <div class="container flex justify-between">
+                            <div class="contact flex items-center">
+                                <img src="./icons/phone.svg" alt="">
+                                <div>
+                                    <h5>Call US: (+91)70576 35016</h5>
+                                    <h6>E-mail : smbtjunior@gmail.com</h6>
+                                </div>
+                            </div>
+                            <div class="branding">
+                                <h1 style="font-weight: 600;">S. M. B. Torgalkar Junior College, Ratnagiri </h1>
+                            </div>
+                            <div class="time flex items-center">
+                                <img src="./icons/clock.svg" alt="">
+                                <div>
+                                    <h5>Working Hours:</h5>
+                                    <h6>Mon - Sat (7.00am - 12.00am)</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar magic-shadow">
+                        <div class="container flex justify-center">
+                            <a href="index.php" class="active">Home</a>
+                            <a href="About-us.html">About us</a>
+                            <a href="Admission.html">Admission</a>
+                            <a href="ebooks.html">E-Books</a>
+                            <a href="Merit.php">Merit List</a>
+                            <a href="Gallery.php">Gallery</a>
+                            <a href="Faculty.html">Faculty</a>
+                            <a href="Feedback.html">Contact us</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="news-ticker">
+                    <div class="news-ticker-header">
+                        <p>Announcement</p>
+                    </div>
+                    <div class="news-ticker-content">
+                        <ul>
+                            New Notifications, Announcements Will Appear Here.
+                        </ul>
+                    </div>
+                </div>
+                <!--=============== Hero Section Starts ===============-->
+                <header class="hero flex items-center">
+                    <div class="container">
+                        <p style="margin: 0;font-size: 25px;">R. E. Society's</p>
+                        <h1>S. M. B. Torgalkar Junior College</h1>
+                        <p>"Join us as we embark on a journey of knowledge, discovery, and endless possibilities."</p>
+                        <div>
+                            <a href="About-us.html"><button class="btn btn-primary">Read More</button></a>
+                        </div>
+                    </div>
+                </header>
+                <!--=============== Hero Section Ends ===============-->
+                <section class="about-college">
+                    <div class="container">
+                        <h1 class="section-heading">About College</h1>
+                        <div class="about-college-wrap flex">
+                            <div class="flex-1 fade-side-left">
+                                <img src="./images/hero-img.png" alt="">
+                            </div>
+                            <div class="flex-1 fade-side-right">
+                                <h2>"Harnessing Knowledge, Empowering Futures: Your Path to Academic Excellence Begins
+                                    Here!"</h2>
+                                <p>In the year 2016-17, considering the increasing number of post-10th students in
+                                    Ratnagiri district, Ratnagiri Education Society on 14th July 2016 Bh. Shirke Junior
+                                    College started. This college was inaugurated by the then working president Adv.
+                                    Patne Sir as well as Adv. Vijay Sakhalkar Sir, Acting Mrs. Prachi Joshi, Governing
+                                    Body Member Shri. It was done by Manoj Patankar Sir.</p>
+
+                                <a href="About-us.html" style="text-decoration:none;" <button class="btn btn-about">Read More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="latest-news">
+                    <div class="container">
+                        <h1 class="section-heading">Latest Notice</h1>
+                        <div class="main-table">
+                            <table class="size">
+                                <thead>
+                                    <th class="notice-head" colspan="2">Notice Board</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="https://www.shiksha.com/news/boards-maharashtra-12th-hsc-board-exam-2024-begins-check-important-exam-day-guidelines-time-table-blogId-156141"
+                                                style="text-decoration: none; color: black;">
+                                                <h3>Lastest News about the HSC Boards Examination</h3>
+                                            </a>
+                                        </td>
+                                        <td class="center"><small>Published on 27th February 2024</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <h3>Notice number 2</h3>
+                                        </td>
+                                        <td class="center"><small>Published on 12th April 2024</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <h3>Notice number 3</h3>
+                                        </td>
+                                        <td class="center"><small>Published on 12th April 2024</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <div class="contentAreaWrap">
+                    <div class="Speech">
+                        <div class="mwPageArea">
+                            <div id="wK8XUAP360G356EL" class="mwPageBlock fade">
+                                <div class="blockContents  pad-top-m pad-bottom-m">
+                                    <article class=" Shirke" tabindex="0">
+                                        <img class=" ShirkeQuote ShirkeQuoteOpen" src="./icons/quote-open-yellowOL.svg"
+                                            alt="">
+                                        <img class=" ShirkeQuote ShirkeQuoteClose" src="./icons/quote-close-pink.svg"
+                                            alt="">
+                                        <div class=" ShirkeWrap">
+                                            <div class=" ShirkeImage">
+                                                <img src="./images/Gallery/10.jpg" class="fade-side-left" alt="">
+                                            </div>
+                                            <div class=" ShirkeContent">
+                                                <div class=" ShirkeContentWrap">
+                                                    <div class=" ShirkeName">
+                                                        - <span class=" ShirkeNameText">Sahil</span>
+                                                    </div>
+                                                    <div class=" ShirkeDescription">
+                                                        At S. M. B. Torgalkar Junior College, I’ve been able to develop
+                                                        my communication skills and learned how to
+                                                        work well independently and on a team. With the support of my
+                                                        professors, I’ve
+                                                        been able to gain valuable career experience on and off campus.
+                                                        Ultimately, I’m
+                                                        becoming a stronger leader.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="we-provide">
+                    <div class="container">
+                        <h1 class="section-heading">Our Facilities</h1>
+                        <div class="card-wrapper flex">
+                            <div class="fade-side-left">
+                                <div class="service-card">
+                                    <img class="icon" src="./icons/monitor.svg" alt="">
+                                    <h2>Proper Labs</h2>
+                                    <p>Our laboratories are equipped with the latest technology for optimal outcomes in
+                                        practicals.</p>
+                                    </p>
+                                    <a href="About-us.html"><button class="btn btn-primary">Read More</button></a>
+                                </div>
+                            </div>
+                            <div class="fade">
+                                <div class="service-card">
+                                    <img class="icon" src="./icons/education.svg" alt="">
+                                    <h2>Quality Education</h2>
+                                    <p>Well Trained Teaching staff that provide Quality Education and Help in Problem
+                                        solving doubt</p>
+                                    <a href="About-us.html"><button class="btn btn-primary">Read More</button></a>
+                                </div>
+                            </div>
+                            <div class="fade-side-right">
+                                <div class="service-card">
+                                    <img class="icon" src="./icons/Clean.svg" alt="">
+                                    <h2>Clean Campus</h2>
+                                    <p>Our Campus is well maintained and and 100% under security camera surveillance
+                                    </p>
+                                    <a href="About-us.html#campus"><button class="btn btn-primary">Read
+                                            More</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="top-rankers">
+                    <div class="container fade-side-left">
+                        <div class="left-title fade">
+                            <h1 class="section-heading" style="margin-top: -10px;">Top Rankers of Science Faculty</h1>
+                        </div>
+                        <div class="right-title">
+                            <table>
+                                <tr>
+                                    <th>Batch</th>
+                                    <th>Name</th>
+                                    <th colspan="3">Marks</th>
+
+                                </tr>
+                                <tr>
+                                    <td>2018</td>
+                                    <td>Miss. Anvekar Nikita Gurudas </td>
+                                    <td>First Class</td>
+                                    <td>361/650</td>
+                                    <td>60.15%</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Mr. Jig Siddharth Rajiv</td>
+                                    <td>First Class</td>
+                                    <td>410/650</td>
+                                    <td>63.08%</td>
+                                </tr>
+                                <tr>
+                                    <td>2020</td>
+                                    <td>Mr. Gore Tushar Pandhurang</td>
+                                    <td>First Class</td>
+                                    <td>460/650</td>
+                                    <td>70.77%</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>Miss. Sawant Nilam Sachin</td>
+                                    <td>First Class</td>
+                                    <td>482/600</td>
+                                    <td>80.33%</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>Miss. Qazi Hina Salim</td>
+                                    <td>First Class</td>
+                                    <td>402/600</td>
+                                    <td>67.00%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- </section>
+
+                <section class="top-rankers"> -->
+                    <div class="container fade-side-right">
+                        <div class="left-title">
+                            <h1 class="section-heading" style="margin-top: -10px;">Top Rankers of Commerce Faculty</h1>
+                        </div>
+                        <div class="right-title">
+                            <table>
+                                <tr>
+                                    <th>Batch</th>
+                                    <th>Name</th>
+                                    <th colspan="3">Marks</th>
+
+                                </tr>
+                                <tr>
+                                    <td>2018</td>
+                                    <td>Miss. Agarwal Ruchita Gopal</td>
+                                    <td>First Class</td>
+                                    <td>562/650</td>
+                                    <td>86.46%</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Miss. Sawant Siddhi Milind</td>
+                                    <td>First Class</td>
+                                    <td>479/650</td>
+                                    <td>73.69%</td>
+                                </tr>
+                                <tr>
+                                    <td>2020</td>
+                                    <td>Miss. Badkas Manasi Vilas</td>
+                                    <td>First Class</td>
+                                    <td>549/650</td>
+                                    <td>76.50%</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>Miss. Narkar Gauri Shantaram</td>
+                                    <td>First Class</td>
+                                    <td>459/600</td>
+                                    <td>76.83%</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>Mr. Mahadik Praful Sandip</td>
+                                    <td>First Class</td>
+                                    <td>443/600</td>
+                                    <td>73.83%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="cta" class="cta">
+                    <div class="container">
+                        <div class="row">
+                            <div class="AdTitle">
+                                <h3>प्रवेश प्रक्रिया / Admission</h3>
+                                <p>To Apply for admission click here
+                                </p>
+                            </div>
+                            <div class="cta-btn-container">
+                                <a class="cta-btn" href="Admission.html">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="scaling"></div>
+                <section class="contact-us flex">
+                    <div class="contact-info-wrapper">
+                        <h1 class="section-heading text-pure">Contact us</h1>
+                        <div class="contact-info">
+                            <div>
+                                <div>
+                                    <img src="./icons/phone-2.svg" alt="">
+                                    <div>
+                                        <span>Call us:</span>
+                                        <span>(+91) 70576 35016</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./icons/bag-2.svg" alt="">
+                                    <div>
+                                        <span>E-mail :</span>
+                                        <span>smbt
+junior@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./icons/clock-2.svg" alt="">
+                                    <div>
+                                        <span>Working Hours:</span>
+                                        <span>Mon - Sat (7.00am - 12.00pm)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.64301929449!2d73.30458170752156!3d16.992100942740574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea0d001dc842a5%3A0x7bac9c1747ee87fb!2sR.B%20Shirke%20Junior%20College%2C%20Ratnagiri!5e0!3m2!1sen!2sin!4v1705396114596!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+
+                <footer>
+                    <div class="container">
+                        <div class="box">
+                            <h3>About us</h3>
+                            <p>It was popularised in the 1960 with the release of Latest sheets containing Lorem Ipsum
+                                passage.</p>
+                            <button class="btn btn-foot">Read More</button>
+                        </div>
+                        <div class="box">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>
+                                    <a href="index.php">Home</a>
+                                </li>
+                                <li>
+                                    <a href="About.html">About us</a>
+                                </li>
+                                <li>
+                                    <a href="Gallery.php">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="Feedback.html">Contact us</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h3>Follow Us</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/RBShirkeHighSchoolRatnagiri">
+                                            <img src="./icons/facebook.svg" alt="">
+                                            <span>Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/_itz_sahil_9_/">
+                                            <img src="./icons/instagram.svg" alt="">
+                                            <span>Instagram</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </div>
+            </footer>
+            <footer class="copyright">
+                <div>
+                    Copyright © 2024 .All rights reserved by <a href="https://www.instagram.com/_itz_sahil_9_/">Sahil
+                        Amberkar</a> <a href="https://www.instagram.com/its_t_e_j_a_s/">Tejas
+                        Bhide</a>.
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        var preloader = document.getElementById('preloader');
+
+        function loader() {
+            preloader.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        //--===== Navbar =====--
+$(document).ready(function(){
+  $('.nav-trigger').click(function(){
+    $('.site-content-wrapper').toggleClass('scaled');
+  });
+});
+
+ 
+//--===== Loader =====--
+var preloader = document.getElementById('preloader');
+
+function loader(){
+  preloader.style.display = 'none';
+}
+
+
+
+//--===== percentage Calculator =====--
+function calcsci(){
+  var marks = document.getElementById("markssci").value;
+  var total = document.getElementById("totalsci").value;
+  document.getElementById("percentsci").value = parseFloat((marks/total)*100).toFixed(1);
+}
+function calc(){
+  var marks = document.getElementById("marks1").value;
+  var total = document.getElementById("total1").value;
+  document.getElementById("percent1").value = parseFloat((marks/total)*100).toFixed(1);
+}
+
+
+
+var loadFile1 = function (event) {
+  var image1 = document.getElementById('output1');
+  image1.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadFile2 = function (event) {
+  var image = document.getElementById('output2');
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadFile3 = function (event) {
+  var image1 = document.getElementById('output3');
+  image1.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadFile4 = function (event) {
+  var image = document.getElementById('output4');
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+
+//--===== Loader =====--
+var preloader = document.getElementById('preloader');
+
+function loader(){
+ preloader.style.display = 'none';
+}
+
+
+//--===== Show and Hide Commerce Form =====--
+document.getElementById("toggleDiv1Button").addEventListener("click", function() {
+  var div1 = document.getElementById("div1");
+  div1.classList.toggle("hidden");
+});
+
+document.getElementById("toggleDiv2Button").addEventListener("click", function() {
+  var div1 = document.getElementById("div1");
+  var div2 = document.getElementById("div2");
+  div1.classList.add("hidden");
+  div2.classList.toggle("hidden");
+});
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
